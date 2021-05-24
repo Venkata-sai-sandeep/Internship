@@ -1,0 +1,52 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VNS Mobile Banking</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'personalbankingoperations.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+</head>
+
+<div class="a">
+	<h1  style="text-align:center;">
+		VNS BANKING AND FINANCE SERVICES
+	</h1>
+</div>
+
+<div class="navbar">
+  <a href="#home" class="active">Home</a>
+
+  <div class="dropdown" style="margin-left:100px">
+    <button class="dropbtn">Loans
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="\homeloan">Home Loan</a>
+      <a href="\educationloan">Education Loan</a>
+      <a href="\vehicleloan">Vehicle Loan</a>
+    </div>
+  </div>
+
+    <div class="dropdown" style="margin-left:100px">
+    <button class="dropbtn">Money Transfer
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="\accounttransaction">Account to Account</a>
+
+    </div>
+    </div>
+
+
+
+    <a href="\home1" style="margin-left:200px"> <--Back </a>
+</div>
+<div>
+     <img style="margin-top:150px;margin-left:800px" src="{% static 'loans3.gif' %}" width="650" height="400">
+    <img style="margin-top:-400px;margin-left:50px" src="{% static 'loan4.gif' %}" width="650" height="400">
+ </div>

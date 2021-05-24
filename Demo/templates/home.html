@@ -1,0 +1,58 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VNS BANKING AND FINANCE SYSTEM</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'home.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+</head>
+<div class="a">
+	<h1  style="text-align:center;">
+		VNS BANKING AND FINANCE SERVICES
+	</h1>
+</div>
+
+<div class="navbar">
+  <a class="active" href="">Home</a>
+  <!--<a href="\aboutus" style="margin-left:30px">Our Team</a> --!>
+
+  <div class="dropdown">
+    <button class="dropbtn" style="margin-left:30px">Banking
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="\netbanking">Payments services</a>
+      <a href="\personalbanking">Personal Banking</a>
+    </div>
+  </div>
+	<div class="dropdown">
+    <button class="dropbtn" style="margin-left:30px">Finance
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="\applyloans1">Apply Loans </a>
+      <a href="\insurance1">Apply Insurance</a>
+    </div>
+  </div>
+	<a href="\contactus" style="margin-left:30px">Feedback</a>
+	<a style="margin-left:30px" href="\login" >Login</a>
+	<a style="margin-left:30px" href="\signup">Signup</a>
+
+
+</div>
+	<div class="image">
+	<img  src="{% static 'home4.png' %}" width="1550" height="600">
+	</div>
+
+<div>
+
+
+
+</div>
+
+</html>

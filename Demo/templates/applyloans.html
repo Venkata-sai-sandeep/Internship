@@ -1,0 +1,77 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VNS Postpaid bills</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'applyloans.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+</head>
+
+<div class="a">
+	<h1  style="text-align:center;">
+		VNS BANKING AND FINANCE SYSTEM
+	</h1>
+</div>
+<head>
+	<script>
+
+function computeLoan(){
+   var loan = document.getElementById('loan').value;
+   var interest_rate = document.getElementById('interest_rate').value;
+   var months = document.getElementById('months').value;
+   var interest = (loan * (interest_rate * .01)) / months;
+   var payment =  ((loan / months) + interest).toFixed(2);
+   payment = payment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+   document.getElementById('payment').innerHTML = "Monthly Payment= "+payment;
+}
+</script>
+
+</head>
+
+
+<form class="box">
+    <h1><strong>WORKERS LOAN/SALARY SCALE MACHINE</strong></h1>
+	<br>Customer ID:</br>
+       <input type="text" id="CID" min="1" max="1000000" placeholder="Your ID" >
+        <br>Amount loaned:</br>
+       <input type="text" id="loan" min="1" max="1000000" placeholder="Amount" onchange="computeLoan()">
+        <br>Interest Rate (%):</br>
+        <input type="text" id="interest_rate" min="0" max="100" placeholder="" value="10" step=".1" onchange="computeLoan()">
+        <br>Months:</br>
+       	<input type="text" id="months" min="1" max="72" value="1" step="1" onchange="computeLoan()">
+ </form>
+      <h2 id="payment"></h2>
+<div class="box1">
+<input type="submit" value="check" class="btn">
+<marquee>
+   <strong>
+        Hi...Get Your loan, Utilize it well, and pay back with little interest...
+   </strong>
+</marquee>
+
+   <div>
+   Powered by MSM Banking SERVICES
+   <div>
+   </div>
+   </div>
+</div>
+
+<div>
+    <form class="box2" action="\applyloans2" method="post" name="f1">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter FullName...."><br><br>
+        <input type="text" name="mobileno" placeholder="Enter Contact Number...."><br><br>
+        <input type="text" name="mail" placeholder="Emter Your Mail "><br><br>
+        <input type="text" name="city" placeholder="Enter Your City"><br><br>
+        <input type="text" name="income" placeholder="Enter Your Income"><br><br>
+        <input type="text" name="type" placeholder="Enter Loan type. Example: Home loan,Gold Loan "><br><br>
+        <input type="text" name="cid" placeholder="Enter Your CUSTOMERID to Complete this action">
+        <input type="submit" style="color:white;background-color:blue;margin-left:250px">
+    </form>
+</div>
+</html>

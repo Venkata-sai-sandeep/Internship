@@ -1,0 +1,154 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VNS Finance Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'netbanking.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<div class="a">
+	<h1  style="text-align:center;">
+		VNS BANKING AND FINANCE SERVICES
+	</h1>
+</div>
+<div class="box">
+	<h1 style="color:black;font-size:20px">1. Online Registration</h1>
+	<p1 style="color:red;font-size:15px">
+		If the customer wishes to apply for Net Banking services of Canara Bank online, kindly read the Terms and Conditions herein.
+		The act of clicking "I agree" button on the Bank's web page
+		hosting terms and conditions herein amounts to customer signing an agreement with the Bank for
+		Canara Bank Net Banking services and customer consent to abide by the terms and conditions.
+		The Net Banking Services will be extended only to the customer who is agreeing for the Terms and Conditions herein.
+		If the customer does not agree to the Terms and Conditions herein, kindly click on "Disagree" button to exit.
+	</p1>
+	<h1 style="font-size:20px">
+		2. Net Banking Services
+
+	</h1>
+	<p1 style="color:red;font-size:15px">
+		The BANK shall take reasonable care to, ensure the security of and prevent unauthorized access to the Internet Banking Services using technology reasonably available to the BANK in India.
+
+        <br>
+		The USER shall not use or permit to use Internet Banking Service or any related service for any illegal, fraudulent, dishonest or improper purposes.
+	</p1>
+	<h1 style="font-size:20px">
+		3. Password
+	</h1>
+	<p1 style="color:red;font-size:15px">
+		a) The user acknowledges, represents and warrants that the password/ One Time Password (OTP)
+		which will be issued to him/her provides access to the account and that user is the sole
+		and exclusive owner and is the only authorized user of the password/OTP and
+		accepts sole responsibility for use, confidentiality and protection of the password/OTP.
+		The User is entirely responsible for the safekeeping/secrecy and use of password/s and
+		OTP and any damage and other consequences of their misuse wherever applicable.</br>
+		b) The customer understands and agrees that the transaction password is for the purpose
+		of authenticating the transaction and shall have same effect as the specimen signature of authorized signatory
+		of the customer and the customer shall be bound by the transactions initiated by the use of transaction password.</br>
+		c) The user agrees and acknowledges that BANK shall in no way be held responsible or liable if the user incurs any loss as a
+		result of compromise of User-id and password by the user himself or theft of or user has failed to follow the Internet Banking
+		Service instructions as published by the BANK on the website from time to time. User agrees to fully indemnify and hold harmless BANK in
+		respect of the same.
+
+	</p1>
+
+</div>
+
+<body>
+
+<h2></h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn" class="button" style="margin-left:650px;background-color:blue;color:white;">I Agree</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Please Login to Continue</p>
+      <a href="\login" class="button" style="margin-left:650px;background-color:blue;color:white;"> Login </a>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>

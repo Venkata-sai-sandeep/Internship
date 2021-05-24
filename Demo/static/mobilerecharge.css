@@ -1,0 +1,45 @@
+.a {
+  color:blue;
+  background-color:skyblue;
+ }
+ .box {
+background-color: skyblue;
+  width: 400px;
+  height:250px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 10px;
+  margin-left:850px;
+  margin-top:200px;
+
+}
+
+.button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+body
+{
+    font-family:Tahoma, Geneva,sans-serif;
+    color: #fff;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), Url(mobilerecharge1.png);
+    background-size: 1500px 700px;
+}
+.box1 {
+background-color: ffd6a5;
+  width: 400px;
+  height:250px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 10px;
+  margin-left:850px;
+  margin-top:200px;
+
+}

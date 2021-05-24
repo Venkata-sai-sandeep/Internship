@@ -1,0 +1,142 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VNS Netbanking Resister</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'signup.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+	<script>
+
+	function checkname1(){
+        var n=document.getElementById('user').value;
+        var error="";
+        if(n.length<6){
+      error="**username should contain atleast 6 characters";
+      document.getElementById("ner").innerHTML=error;}
+        for(var i=0;i<n.length;i++){
+            if(n[i]=='0'||n[i]=='1'||n[i]=='2'||n[i]=='3'||n[i]=='4'||n[i]=='5'||n[i]=='6'||n[i]=='7'||n[i]=='8'||n[i]=='9'){
+                error=error+"\n"+"Name should not contain numbers";
+                document.getElementById("ner1").innerHTML=error;
+            break;}
+        }
+        document.getElementById("ner1").innerHTML=error;
+
+    }
+	function checkname(){
+        var n=document.getElementById('name').value;
+        var error="";
+        if(n.length<6){
+      error="**Firstname should contain atleast 6 characters";
+      document.getElementById("ner").innerHTML=error;}
+        for(var i=0;i<n.length;i++){
+            if(n[i]=='0'||n[i]=='1'||n[i]=='2'||n[i]=='3'||n[i]=='4'||n[i]=='5'||n[i]=='6'||n[i]=='7'||n[i]=='8'||n[i]=='9'){
+                error=error+"\n"+"Name should not contain numbers";
+                document.getElementById("ner").innerHTML=error;
+            break;}
+        }
+        document.getElementById("ner").innerHTML=error;
+
+    }
+    function check(){
+    var n=document.getElementById('PhoneNumber').value.length;
+    var error="";
+    if(n!=10){
+     error="**Phone number must contain 10 digits"
+       document.getElementById("nnu").innerHTML=error;
+    }
+    document.getElementById("nnu").innerHTML=error;
+    }
+    function checkexpiremonth(){
+    var n=document.getElementById('expiremonth').value.length;
+    var error="";
+    if (isNaN(n) || x < 1 || x > 12){
+
+       document.getElementById("nnu").innerHTML=error;
+    }
+    error="**please enter Vaild month"
+    document.getElementById("nage").innerHTML=error;
+    }
+     function checkacc(){
+
+
+    var n=document.getElementById('acc').value.length;
+    var error="";
+    if(n!=10){
+     error="**Account number must contain 13 digits"
+
+       document.getElementById("nacc").innerHTML=error;
+    }
+    document.getElementById("nacc").innerHTML=error;
+    }
+
+     function checkmail(){
+        var error="";
+        var c=0;
+        var n=document.getElementById("E-mail").value;
+        if(n[n.length-1]=='m'&&n[n.length-2]=='o'&&n[n.length-3]=='c'){
+        for(var i=0;i<n.length;i++){
+        if(n[i]=='@'){
+        c=1;
+            break;} }}
+            if(c==0)
+            error="Mail must be in name@domain.com format";
+            document.getElementById("nem").innerHTML=error;
+           }
+           function check2(){
+        var error="";
+        var n1=document.getElementById('password').value.length;
+        if(n1<8){
+            error="**Password should not be less than 8 characters";
+    document.getElementById("npa").innerHTML=error;}
+    document.getElementById("npa").innerHTML=error;
+
+    }
+    </script>
+
+</head>
+<body class="body">
+    <div class="a">
+	<h1  style="text-align:center;">
+		VNS BANKING AND FINANCE SERVICES
+	</h1>
+
+	</div>
+	<h1 style="color:red;font-size:15px ;margin-top:70px;margin-left:500px"> Please Fill out the details very Carefullt</h1>
+
+
+    <div class="box">
+        <form method="post" action="\post" name="f1" onsubmit="validateForm()">
+			{% csrf_token %}
+             <label for="customerid" style="font-size:20px;color:black">Customer ID : </label>
+             <input  placeholder="Customer ID" id="customerid" name="customerid" style="margin-left:105px"  maxlength="8" type="text" required size="30"><br><br>
+            <label for="accountnumber"  style="font-size:20px;color:black " >Account Number : </label>
+            <input placeholder="Account Number" name="accountno" style="margin-left:70px" type="text" maxlength="16" required size="30" ><br><br>
+			<label for="adharnumber"  style="font-size:20px;color:black " >Adhar Number : </label>
+            <input placeholder="Adhaar Number" name="adharno" style="margin-left:90px" type="text" maxlength="16" required size="30" ><br><br>
+			<label for="atmnumber" style="font-size:20px;color:black">ATM card Number : </label>
+			<input placeholder="ATM card Number" style="margin-left:55px" name="atmcardno" type="text" maxlength="16" required size="30"><br><br>
+             <label for="expiremontha" style="font-size:20px;color:black">Expry Month : </label>
+             <input type="text" maxlength="2" size=2px" id="expiremonth" style="margin-left:20px" name="expiremonth" onchange="checkem" required>
+			<label for="expireyear" style="font-sixe:20px;color:black;margin-left:20px">Expire Year : </label>
+             <input type="text" maxlength="2" size=2px" style="margin-left:20px" name="expireyear" required><br><br>
+			<label for="mobile" style="font-sixe:20px;color:black">Regestered Mobile Number :</label>
+             <input placeholder="Mobile Number" type="text" maxlength="10" style="margin-left:27px" size="30" name="mobileno" required><br><br>
+			<label for="mail" style="font-size:20px;color:black">Email : </label>
+			<input type="text" placeholder="Enter Email " style="margin-left:165px" name="mail" required><br><br>
+			<label for="cvv" style="font-size:20px;color:black">CVV Number : </label>
+			<input placeholder="CVV Number"  type="password" maxlength="3" size="30" name="cvv" required style="margin-left:100px"><br><br>
+			<label for="passw" style="font-size:20px;color:black">Password : </label>
+			<input placeholder="Password" type="password" size="30"  name="passw" required style="margin-left:130px"><br><br>
+			<label for="rpass" style="font-size:20px;color:black">Repeat Password : </label>
+			<input placeholder="Repeat Password" type="password" size="30" name="rpass" required style="margin-left:60px"><br><br><br>
+
+			<button type="submit" style="margin-left:150px;background-color:blue;color:white" value="Proceed" onclick="validateForm()" >Proceed</button>
+       		<a  href="\"  class="button" style="margin-left:50px">Back</a>
+		</form>
+    </div>
+</body>

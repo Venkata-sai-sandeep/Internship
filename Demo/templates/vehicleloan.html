@@ -1,0 +1,116 @@
+
+{% load static %}
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VNS Mobile Banking</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'vehicleloan.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+
+
+     <script>
+
+         function calculator() {
+        const loanstruct = {
+        loanAmount:document.getElementById("amount").value,
+        annualInterestrate:document.getElementById("apr").value,
+        loanDuration:document.getElementById("tenure").value
+        };
+      // Passing the object as the arguement. The function also returns an object that includes both EMI & Total
+      console.log(loanstruct)
+      function EMIVal2(loan){
+          interest = loan.annualInterestrate/1200;
+          let term = loan.loanDuration*12;
+          let top = Math.pow((1+interest),term);
+          let bottom = top - 1;
+          let ratio = top/bottom;
+          EMI = loan.loanAmount * interest * ratio;
+          Total = EMI*term;
+          const EMIObj = {
+            EMI:EMI.toFixed(0),
+            Total:Total.toFixed(0)
+            };
+          return EMIObj
+      }
+      console.log(EMIVal2(loanstruct));
+      document.getElementById("EMICapt").innerHTML='<P><b>EMI: Rs. </b>' + EMIVal2(loanstruct).EMI + '<br>' + '<b> Total: Rs. </b>' + EMIVal2(loanstruct).Total +'</P>';
+
+      return false
+    }
+     </script>
+</head>
+<body >
+<div class="a">
+	<h1  style="text-align:center;">
+		VNS BANKING AND FINANCE SERVICES
+	</h1>
+</div>
+<div class="outerShell" style="margin-right:700px">
+    <H1>EMI Calculator for Homeloans</H1>
+    <form name="loan-form" onsubmit="return calculator()">
+    <div class='loanBlock'>
+     Loan Amount<br>
+     <input type=number id="amount" style="border-radius:5px"><br>
+    </div>
+     <div class='aprBlock'>
+     Annual Percent Rate<br>
+     <input type="number" name="apr" id="apr" style="border-radius:5px"><br>
+     </div>
+      <div class='tenureBlock'>
+     Years<br>
+     <input type=number name="tenure" id="tenure" style="border-radius:5px"><br>
+     <br>
+      </div>
+      <div id=buttonBlock>
+    <button style="border-radius:2px">Find Out</button>
+      </div>
+    </form>
+    <P id="EMICapt"></P>
+    <script src='script.js'> </script>
+  </div>
+</body>
+
+<form class="box" method="post" action="\applyvehicleloan1">
+    {% csrf_token %}
+ <label for="text" class="" style="color:black;" >Full Name : </label><br>
+    <input name="name" type="text" required placeholder="Enter Full name"><br><br>
+    <label for="text" class="" style="color:black;" >Mobile Number : </label><br>
+    <input type="text" name="mobileno" required placeholder="Enter Mobile No : "><br><br>
+    <label for="vehicletype" style="color:black;">Choose type of vehicle :</label>
+
+    <select name="vehicletype" id="vehicletype">
+  <option value="2 Wheelers">2 Wheelers</option>
+  <option value="4 Wheelers">4 Wheelers</option>
+  <option value="6 Whleers">6 Wheelers</option>
+  <option value="more">More</option>
+    </select>
+    <br><br>
+
+    <label for="text" class="" style="color:black;" >Enter Emount Required </label>
+    <input type="number" name="amount" required placeholder="Enter Amount required"><br><br>
+    <label for="years" style="color:black;">Select Number Of Years :</label>
+
+    <select name="years" id="years">
+  <option value="1">1 Year</option>
+  <option value="2">2 years</option>
+  <option value="3">3 years</option>
+  <option value="4">4 years</option>
+  <option value="5">5 years</option>
+  <option value="6">6 years</option>
+  <option value="7">7 years</option>
+  <option value="8">8 years</option>
+  <option value="9">9 years </option>
+  <option value="10">10 years</option>
+    </select><br><br>
+    <label for="cid" style="color:black">Please Enter Your Bank Account CUSTOMER ID to continue Payment : </label>
+	<input type="text" maxlength="8" name="cid" required>
+	<br><br>
+
+    <input type="submit" style="color:white;background-color:blue;margin-left:170px" value="Proceed">
+
+</form>

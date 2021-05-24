@@ -1,0 +1,29 @@
+.a {
+ color:blue;
+ background-color:skyblue;
+}
+.heading {
+ font-style:serif;
+ color:green;
+ text-align:center;
+ margin-top:100px;
+}
+body
+{
+    font-family:Tahoma, Geneva,sans-serif;
+    color: #fff;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), Url(ourteam.jpg);
+     background-size: 1600px 900px;
+    background-repeat:no-repeat;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}

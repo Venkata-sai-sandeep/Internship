@@ -1,0 +1,49 @@
+.a{
+color:blue;
+background-color:skyblue;
+}
+body
+{
+    font-family:Tahoma, Geneva,sans-serif;
+    color: #fff;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), Url();
+    background-size: 1500px 800px;
+    background-repeat:no-repeat;
+    background-color:9bf6ff;
+
+}
+
+.button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 153px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+
+.button1 {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 142px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.button2 {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 143px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+

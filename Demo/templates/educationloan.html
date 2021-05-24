@@ -1,0 +1,186 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>VNS Mobile Banking</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'educationloan.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+
+</head>
+<div class="a">
+	<h1  style="text-align:center;margin-top:-150px">
+		VNS BANKING AND FINANCE SERVICES
+	</h1>
+</div>
+<body class="body">
+<form action="\applyeducationloan1" method="post" name="f1">
+    {% csrf_token %}
+<div class="box" style="margin-top:-10px">
+    <h1 class="title">Education Loan</h1>
+                  <p class="title_p">Apply for a loan at the best interest rate to fund your education</p>
+                  <div class="form-group">
+                    <div class="col-md-6">
+                      <label for="text" class="h5">First Name : </label>
+                      <input type="text" class="input" style="margin-left:100px"  id="fname12" name="fname" placeholder="First Name"  data-parsley-error-message="First Name is Required" data-parsley-pattern="^[A-Za-z]*$" pattern="^[A-Za-z]*$" required />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-6">
+                      <label for="text" class="h5">Last Name : </label>
+                      <input type="text" class="input" style="margin-left:103px"  id="flname22" name="lname" placeholder="Last Name" pattern="^[A-Za-z]*$" required data-parsley-error-message="Last Name is Required" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-6">
+                      <label for="text" class="h5">Mobile Number : </label>
+                      <input type="number"  class="input" style="margin-left:70px" class="inputtext form-control" id="fmobno2" name="mobileno" placeholder="Mobile No." required maxlength="10" data-parsley-minlength="10" data-parsley-type="number" data-parsley-trigger="change" data-parsley-error-message="Mobile number is required" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-6">
+                      <label for="text" class="h5">Email : </label>
+                      <input type="email" class="input" style="margin-left:135px"  class="inputtext form-control" id="femailid2" name="email" placeholder="Email Id" required maxlength="50" data-parsley-type="email" data-parsley-trigger="change" data-parsley-error-message="Emailid is Required" />
+                    </div>
+                  </div>
+                  <input type="hidden" id="fsource12" name="source12" value="Dynamic" />
+                    <input type="hidden" id="fcampaignid12" name=" campaignid12" value="" />
+                  <input type="hidden" id="fadgroup12" name="adgroup12" value="" />
+                  <input type="hidden" id="fmykeyword12" name="mykeyword12" value="" />
+                  <input type="hidden" id="fmygclid12" name="fmygclid12" value="" />
+                  <div class="form-group">
+                    <div class="col-md-12">
+                      <h5 class="h5">City : </h5>
+                      <select class="form-control" id="fcityresidenceS2" name="city" class="input" required data-parsley-error-message="City of residence is required">
+                        <option name="" value="" selected="" >Select</option>
+                        <option name="delhi" value="Delhi & NCR">Delhi & NCR</option>
+                        <option name="jaipur" value="Jaipur">Jaipur</option>
+                        <option name="chandigarh" value="Chandigarh">Chandigarh</option>
+                        <option name="ludhiana" value="Ludhiana">Ludhiana</option>
+                        <option name="kolkata" value="Kolkata">Kolkata</option>
+                        <option name="bhubneshwar" value="Bhubneshwar">Bhubneshwar</option>
+                        <option name="bangalore" value="Bangalore">Bangalore</option>
+                        <option name="chennai" value="Chennai">Chennai</option>
+                        <option name="coimbatore" value="Coimbatore">Coimbatore</option>
+                        <option name="hyderabad" value="Hyderabad">Hyderabad</option>
+                        <option name="vijayawada" value="Vijaywada">Vijaywada</option>
+                        <option name="vizag" value="Vizag">Vizag</option>
+                        <option name="ahemadabad" value="Ahemadabad">Ahemadabad</option>
+                        <option name="baroda" value="Baroda">Baroda</option>
+                        <option name="surat" value="Surat">Surat</option>
+                        <option name="mumbai" value="Mumbai, Thane, Navi Mumbai">Mumbai, Thane, Navi Mumbai</option>
+                        <option name="pune" value="Pune">Pune</option>
+                        <option name="indore" value="Indore">Indore</option>
+                        <option name="other" value="Other">Others</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-6">
+                      <h5 class="h5">Place of Study</h5>
+                      <select class="form-control" id="fcountrystudyS2" name="studyplace" class="inputtext form-control" required>
+                        <option name="other" value="Others" selected="">Others</option>
+                        <option name="uk" value="UK">UK</option>
+                        <option name="usa" value="USA">USA</option>
+                        <option name="canada" value="Canada">Canada</option>
+                        <option name="australia" value="Australia">Australia</option>
+                        <option name="singapore" value="Singapore">Singapore</option>
+                        <option name="newzealand" value="New Zealand">New Zealand</option>
+                        <option name="germany" value="Germany">Germany</option>
+                        <option name="france" value="France">France</option>
+                        <option name="uae" value="UAE">UAE</option>
+                        <option name="india" value="India">India</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-12">
+                      <h5 class="h5">Loan Amount (Rs.)</h5>
+                      <select class="form-control" id="floanamnt2" name="amount" class="finputtext" required data-parsley-id="8880" data-parsley-error-message="Loan Amount is Required" required>
+                        <option value="" selected="">e.g. 5 to 10 Lacs</option>
+                        <option name="10" value="10">5 to 10 Lacs</option>
+                        <option name="20" value="20">10 to 20 Lacs</option>
+                        <option name="30" value="30">20 to 30 Lacs</option>
+                        <option name="40" value="40">30 to 40 Lacs</option>
+                        <option name="50" value="50">50 Lacs and above</option>
+                      </select>
+                    </div>
+                  </div>
+
+      <label for="cid" style="color:black">Please Enter Your Bank Account CUSTOMER ID to continue Payment : </label>
+	<input type="text" maxlength="8" name="cid" required>
+	<br><br>
+                  <div >
+                     <input type="submit" value="Proceed" class="button" style="background-color:blue;color:white ;margin-top:30px">
+                    </div>
+
+</div>
+</form>
+
+</body>
+<head>
+<script>
+
+         function calculator() {
+        const loanstruct = {
+        loanAmount:document.getElementById("amount").value,
+        annualInterestrate:document.getElementById("apr").value,
+        loanDuration:document.getElementById("tenure").value
+        };
+      // Passing the object as the arguement. The function also returns an object that includes both EMI & Total
+      console.log(loanstruct)
+      function EMIVal2(loan){
+          interest = loan.annualInterestrate/1200;
+          let term = loan.loanDuration*12;
+          let top = Math.pow((1+interest),term);
+          let bottom = top - 1;
+          let ratio = top/bottom;
+          EMI = loan.loanAmount * interest * ratio;
+          Total = EMI*term;
+          const EMIObj = {
+            EMI:EMI.toFixed(0),
+            Total:Total.toFixed(0)
+            };
+          return EMIObj
+      }
+      console.log(EMIVal2(loanstruct));
+      document.getElementById("EMICapt").innerHTML='<P><b> </b>'  + '<br>' + '<b> Total: Rs. </b>' + EMIVal2(loanstruct).Total +'</P>';
+
+      return false
+    }
+     </script>
+</head>
+
+<div class="outerShell" style="margin-right:700px;margin-top:-600px">
+    <H1>EMI Calculator for Homeloans</H1>
+    <form name="loan-form" onsubmit="return calculator()">
+    <div class='loanBlock'>
+     Loan Amount<br>
+     <input type=number id="amount" style="border-radius:5px"><br>
+    </div>
+     <div class='aprBlock'>
+     Annual Percent Rate<br>
+     <input type="number" name="apr" id="apr" style="border-radius:5px"><br>
+     </div>
+      <div class='tenureBlock'>
+     Years<br>
+     <input type=number name="tenure" id="tenure" style="border-radius:5px"><br>
+     <br>
+      </div>
+      <div id=buttonBlock>
+    <button style="border-radius:2px;margin-left:-350px">Find Out</button>
+      </div>
+    </form>
+    <P id="EMICapt"></P>
+    <script src='script.js'> </script>
+  </div>
+
+</html>

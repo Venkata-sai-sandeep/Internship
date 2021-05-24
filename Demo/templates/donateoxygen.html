@@ -1,0 +1,40 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VNS Postpaid bills</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'donateoxygen.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+</head>
+
+<div class="a">
+	<h1  style="text-align:center;">
+		VNS BANKING AND FINANCE SERVICES
+	</h1>
+</div>
+<h3>
+	<a href="\home1" class="button">Home</a>
+</h3>
+<h2>
+We began our COVID relief work in April 2020 and supported our NGO partners trying to ease the suffering
+	of families caught in the eye of the pandemic storm – with donations from you.
+	Please come forward to donate as much as you can toward PMRELIEF funds.
+</h2>
+<form class="box" action="\paydonateoxygen" method="post" name="f1">
+	{% csrf_token %}
+	<label for="amount" style="" >Amount    : </label>
+	<input type="number" name="amount" style="margin-left:75px" required min="300"><br><br>
+	<label for="amount" style="color:black" id="mail" >Enter mail : </label><br>
+		 <input type="mail" name="mail" size="30px" placeholder="Enter mail"><br><br>
+	<label for="cid" style="">Please Enter Your Bank Account CUSTOMER ID to continue Payment : </label>
+	<input type="text" maxlength="8" name="cid" required>
+	<br><br>
+	<input type="submit" style="color:white;background-color:blue;margin-left:150px">
+
+
+</form>

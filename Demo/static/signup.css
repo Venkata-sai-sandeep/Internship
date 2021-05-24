@@ -1,0 +1,34 @@
+.a {
+margin-top:10px;
+ color:blue;
+ background-color:skyblue;
+}
+
+.box {
+background-color: lightgrey;
+  width: 500px;
+  height:500px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 10px;
+  margin-left:350px;
+  margin-top:10px;
+}
+body
+{
+    font-family:Tahoma, Geneva,sans-serif;
+    color: #fff;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), Url(bank3.jpg);
+    background-size: cover;
+}
+
+.button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}

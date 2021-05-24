@@ -1,0 +1,50 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+<meta http_equip+"Content Type" content="text/html"; charset="UTF-8"/>
+
+<title> Login Page</title>
+<link href="{% static 'login.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'https://fonts.googleapis.com/css?family=play' %}" rel="stylesheet">
+<script>
+    function Username_Password_Check(){
+
+        var pwd=document.f1.pass.value;
+
+
+         if(pwd==null||pwd==""){
+            alert("Please Enter Password.");
+        }
+    }
+
+</script>
+</head>
+
+<body>
+<h1 class="b" style="text-align:center;">
+	VNS BANKING AND FINANCE SERVICES
+
+</h1>
+    <div class="signin">
+    <form action="\log" method="post" name="f1">
+        {% csrf_token %}
+        <a href="/" class="a" style="margin-left:90px"><- Back to Home</a>
+        <h2 style="color:blue;margin-left:100px">Log In</h2>
+        <label for="gmail" style="color:green;margin-left:10px;margin-right:30px">Customerid</label>
+        <input type="text" name="cid" placeholder="Customer ID" required maxlength="8"><br/><br />
+        <label for="password" style="color:green;margin-left:0px;margin-right:10px">Password</label>
+        <input type="password" name="passw" placeholder="password" style="margin-left:42px" required/><br /><br />
+        <input type="submit"style="margin-left:110px;color:white;background-color:blue"  value="Log In" >
+        <br /><br />
+        <div id="container">
+        <a href="reset.html" class="a" style="margin-left:50px" >Reset password?</a>
+        <a href="forgot.html" class="a" style="margin-right:0px; font-size:13px;font-family:Tahoma,Geneva,sans-serif;">Forgotpassword</a>
+        </div><br />
+        <p1 style="color:blue;margin-left:50px">
+        Don't Have account?<a href="/signup" class="a">&nbsp;Sign Up</a>
+        </p1>
+    </form>
+    </div>
+</body>
+</html>
+

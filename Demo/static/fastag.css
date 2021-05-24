@@ -1,0 +1,36 @@
+.a{
+ color:blue;
+ background-color:skyblue;
+}
+ .box {
+background-color: skyblue;
+  width: 420px;
+  height:200px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 10px;
+  margin-left:1000px;
+  margin-top:200px;
+
+}
+
+.button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+body
+{
+    font-family:Tahoma, Geneva,sans-serif;
+    color: #fff;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), Url(fastag1.jpg);
+    background-size: 1000px 700px;
+    background-repeat:no-repeat;
+    background-color:orange;
+}

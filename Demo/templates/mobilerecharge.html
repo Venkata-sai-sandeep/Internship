@@ -1,0 +1,71 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VNS Mobile recharge page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'mobilerecharge.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+</head>
+
+<div class="a">
+	<h1  style="text-align:center;">
+		VNS BANKING AND FINANCE SERVICES
+	</h1>
+</div>
+    <h3>
+	<a href="\home1" class="button">Home</a>
+</h3>
+
+<body class="body"></body>
+
+<div class="box">
+<form method="post" action="\mobilerecharge1" name="f1">
+    {% csrf_token %}
+        <label for="mobileno" style="color:black" >Mobile Number : </label>
+        <input type="text" maxlength="10" name="mobileno" size="20" placeholder="Mobile Number "><br><br>
+        <label for="network" style="color:black">Choose Network:</label>
+         <select name="network" id="network">
+             <option value="select"  >Select</option>
+         <option name="airtel" value="airtel">Airtel</option>
+         <option name="jio" value="jio">Jio</option>
+         <option name="idea" value="idea">Idea</option>
+          <option name="vodaphone" value="vodaphone">Vodaphone</option>
+             <option name="bsnl" value="bsnl">BSNL</option>
+        </select><br><br>
+        <label for="state" style="color:black">Select State : </label>
+         <select name="state" id="state">
+             <option value="select"  >Select</option>
+         <option name="andhrapradesh" value="andhraprades">Andhra Pradesh</option>
+         <option name="madhyapradesh" value="madhyapradesh">Madhya Pradesh</option>
+         <option name="tamilnadu" value="tamilnadu">Tamilnadu</option>
+          <option name="kerala" value="kerala">Kerala</option>
+             <option name="telangana" value="telangana">Telangana</option>
+             <option name="goa" value="goa">Goa</option>
+             <option name="delhi" value="delhi">Delhi</option>
+             <option name="gujarat" value="gujarat">Gujarat</option>
+        </select><br><br>
+        <label for="plans" style="color:black">Select Plan :</label><br>
+         <select name="plans" id="plans">
+             <option value="select" >Select</option>
+         <option name="rc699" value="rc699">Rs : 699 ,3 months validity, Unlimited talktime , DATA : 2 GB per day</option>
+         <option name="rc599" value="rc599">Rs : 599 ,3 months validity, Unlimited talktime , DATA : 1.5 GB per day </option>
+         <option name="rc2999" value="rc2999">Rs : 2999 ,1 year validity, Unlimited talktime , DATA : 1.5 GB per day </option>
+          <option name="rc49" value="rc49">RS : 49 , 1 month validity , 38.00 talktime , Data : 200 MB</option>
+             <option name="rc999" value="rc999">Rs : 999 ,3 months validity, Unlimited talktime , DATA : 3 GB per day</option>
+        </select>
+        <br><br>
+    <label for="mail" style="color:black">Mail id : </label>
+    <input type="email" name="mail" placeholder="Enter Email ID" required><br><br>
+    <label for="cid" style="color:black;">Please Enter Your Bank Account CUSTOMER ID to continue Payment : </label>
+	<input type="text" maxlength="8" name="cid" required>
+	<br><br>
+
+        <input type="submit" style="margin-left:150px;background-color:blue;color:white" value="Proceed">
+
+</form>
+</div>

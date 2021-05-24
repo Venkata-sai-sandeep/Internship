@@ -1,0 +1,61 @@
+{% load static %}
+<! DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VNS Broadband bills payment page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'broadband.css' %}">
+	<link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/icon?family=Material+Icons' %}" />
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %} " integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}"/>
+</head>
+
+<div class="a">
+	<h1  style="text-align:center;">
+		VNS BANKING AND FINANCE SERVICES
+	</h1>
+</div>
+<h3>
+	<a href="\home1" class="button">Home</a>
+</h3>
+
+<form class="box" action="\broadbandrecharge" method="post" name="f1">
+    {% csrf_token %}
+    <label for="network" style="color:black">Select Network : </label>
+         <select style="margin-left:75px" name="network" id="network">
+             <option value="select"  >Select</option>
+         <option name="airtel" value="airtel">Airtel Fiber </option>
+         <option name="jio" value="jio">Jio Fiber</option>
+         <option name="act" value="act">ACT Fiber </option>
+          <option name="ion" value="ion">Ion Fiber</option>
+             <option name="bsnl" value="bsnl">BSNL Broadband</option>
+             <option name="asianet" value="asianet">Asianet Broadband</option>
+             <option name="connect" value="connect">Connect Broadband</option>
+             <option name="den" value="den">DEN Broadband</option>
+             <option name="excel" value="excel">EXCEL Broadband</option>
+             <option name="flash" value="flasn">Flash Fibernet</option>
+             <option name="netplus" value="netplus">Netplus Broadband</option>
+             <option name="wibro" value="wibro">Wibro Broadband</option>
+        </select><br><br>
+        <label for="customerid" style="color:black;">Customer Id or Username : </label>
+      <input type="text" name="customerid" required placeholder="Customer Id or Username"><br><br>
+
+    <label for="plans" style="color:black">Select Plan : </label><br><br>
+         <select name="plans" id="plans">
+             <option value="select"  >Select </option>
+         <option name="rc499" value="rc499">Speed : 40 Mbps, Data : Unlimited ,Validity : 1month </option>
+         <option name="rc799" value="rc799">Speed : 100 Mbps, Data : Unlimited ,Validity : 1month </option>
+         <option name="rc999" value="rc999">Speed : 200 Mbps, Data : Unlimited ,Validity : 1month</option>
+          <option name="rc1499" value="rc1499">Speed : 300 Mbps, Data : Unlimited ,Validity : 1month</option>
+             <option name="rc3999" value="rc3999">Speed : 1 Gbps, Data : Unlimited ,Validity : 1month</option>
+         </select><br><br>
+    <label for="amount" style="color:black" id="mail" >Enter mail : </label><br>
+		 <input type="mail" name="mail" size="30px" placeholder="Enter mail"><br><br>
+     <label for="cid" style="color:black;">Please Enter Your Bank Account CUSTOMER ID to continue Payment : </label>
+	<input type="text" maxlength="8" name="cid" required>
+	<br><br>
+
+    <input type="submit" value="Proceed" style="color:white;background-color:blue;margin-left:150px">
+</form>

@@ -1,0 +1,33 @@
+.a {
+color:blue;
+background-color:skyblue;
+}
+.box {
+background-color: lightgrey;
+  width: 300px;
+  height:300px;
+  border: 1px solid black;
+  padding: 50px;
+  margin: 10px;
+  margin-left:550px;
+  margin-top:100px;
+}
+
+.button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+body
+{
+    font-family:Tahoma, Geneva,sans-serif;
+    color: #fff;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), Url(atoa1.jpg);
+    background-size: cover;
+}
