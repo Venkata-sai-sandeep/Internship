@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'Demo.wsgi.application'
 DATABASES = {
 'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Bank',
+        'NAME': 'internship',
         'USER': 'root',
         'PASSWORD': 'Sandeep@2001',
         'HOST': 'localhost',
@@ -135,5 +135,5 @@ EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'muthavarapusandy@gmail.com'
-EMAIL_HOST_PASSWORD = 'Sandeep@4245'
+EMAIL_HOST_USER = 'msandeep4245@gmail.com'
+EMAIL_HOST_PASSWORD = 'Sandeep@2091'
